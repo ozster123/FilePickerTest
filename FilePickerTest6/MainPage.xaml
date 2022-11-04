@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:FilePickerTest6"
+             x:DataType="viewmodel:MainPageViewModel"
+             x:Class="FilePickerTest6.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label Text="{Binding ResultString}" TextColor="Black" FontSize="Large"/>
+
+            <Button
+                x:Name="TestBtn"
+                Text="Choose file..."
+                SemanticProperties.Hint="Test to select a file"
+                Command="{Binding FileSelectCommand}"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+
